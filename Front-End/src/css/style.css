@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "PT Sans Caption";  
+    src: url("../fonts/PTSansCaption-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+     }
+
+header
+{
+    height: 67px;
+    left: 0px;
+    background: #FFFFFF;
+}
+
+.header__number
+{
+    font-family: 'PT Sans Caption';
+    size: 16px;
+    line-height: 24px;
+}
+
+.header__contactInfo p
+{
+    margin-left: 9px;
+}
