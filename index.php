@@ -79,8 +79,9 @@
                                                 <ul>
                                                     <?php 
                                                     $points = explode("/n", $checkUp[2]);
-                                                    foreach ($points as $point) {
-                                                        echo "<li>$point</li>"
+                                                    foreach ($points as $point) 
+                                                    {
+                                                        echo "<li>$point</li>";
                                                     }
                                                     ?>
                                                 </ul>
