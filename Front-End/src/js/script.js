@@ -13,7 +13,10 @@ document.onclick = function(event){
             BlurEffectAdd() 
             return;
         }
-        document.activeElement.pa
+        if(event.target.className == 'header__button btn btn-primary greenLight' &&  event.target.parentElement.className=="menu" )
+        {
+            BlurEffectClear() 
+        }
         if (event.target.className == 'header__burger active')
         {
             event.target.classList.remove('active');

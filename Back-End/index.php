@@ -48,14 +48,14 @@
                     <li><a href="">Цены</a></li>
                     <li><a href="">Контакты</a></li>                  
                 </ul>
-                <button type="button" class="header__button btn btn-primary greenLight" id="buttonMenu">Записаться на прием</button>
+                <button type="button" class="header__button btn btn-primary greenLight" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"  id="buttonMenu">Записаться на прием</button>
             </div>
             <div class="container-fluid p-0">
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
              <div class="modal-dialog">
                <div class="modal-content">
                  <div class="modal-header">
-                   <h5 class="modal-title" id="exampleModalLabel">Новое сообщение</h5>
+                   <h5 class="modal-title" id="exampleModalLabel">Записаться на прием</h5>
                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                  </div>
                  <div class="modal-body">
@@ -70,7 +70,7 @@
                      </div>
                      <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                        <button type="submit" class="btn btn-primary">Отправить заявку</button>
                      </div>
                    </form>
                  </div>

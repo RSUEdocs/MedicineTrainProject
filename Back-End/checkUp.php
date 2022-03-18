@@ -4,8 +4,7 @@ $mysql = mysqli_connect('localhost','root','','train');
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 if(!$mysql)
 {
-	die("AAAAAAAAAAAAAAAAA");
-	echo(1111);
+	die("Cannot create a connection with database!");
 }
 $query = mysqli_query($mysql,"SELECT * FROM `checkup`");
 if(count($checkUps) == 0)
