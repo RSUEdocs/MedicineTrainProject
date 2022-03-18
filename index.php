@@ -69,20 +69,24 @@
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
+                            <?php
+                            foreach ($_COOKIE["checkUps"] as $checkUp ): ?> {
                                 <div class="carousel-item active">
                                     <div class="checkUp__container">
                                         <div class="checkUp__text">
                                                 <p>CHECK-UP</p>
-                                                <p class="checkUp__gender">для мужчин</p>
+                                                <p class="checkUp__gender"><?= $checkUp[1]?></p>
                                                 <ul>
-                                                    <li>СИСИС</li>
-                                                    <li>СЩСЩС</li>
-                                                    <li>ЫВЫВАщ</li>
-                                                    <li>ваыа</li>
+                                                    <?php 
+                                                    $points = explode("/n", $checkUp[2]);
+                                                    foreach ($points as $point) {
+                                                        echo "<li>$point</li>"
+                                                    }
+                                                    ?>
                                                 </ul>
                                                 <div class="checkUp_price d-flex">
-                                                    <p class="checkUp__discPrice">Всего 2800₽</p>
-                                                    <p class="checkUp__startPrice">3500₽</p>
+                                                    <p class="checkUp__discPrice"><?=$checkUp[4] ?></p>
+                                                    <p class="checkUp__startPrice"><?=$checkUp[3] ?></p>
                                                 </div>                
                                         </div>   
                                         <div class="checkUp__buttons d-flex">
@@ -92,54 +96,9 @@
                                     </div>
                                     <img class="checkUp__image" src="../img/doctor-working-table 1.png">
                                 </div>
+                            }
+                            <?php endforeach; ?>
 
-                                <div class="carousel-item">
-                                        <div class="checkUp__container">
-                                            <div class="checkUp__text">
-                                                    <p>CHECK-UP</p>
-                                                    <p class="checkUp__gender">для женщин</p>
-                                                    <ul>
-                                                        <li>СИСИС</li>
-                                                        <li>СЩСЩС</li>
-                                                        <li>ЫВЫВАщ</li>
-                                                        <li>ваыа</li>
-                                                    </ul>
-                                                    <div class="checkUp_price d-flex">
-                                                        <p class="checkUp__discPrice">Всего 2800₽</p>
-                                                        <p class="checkUp__startPrice">3500₽</p>
-                                                    </div>                
-                                            </div>   
-                                            <div class="checkUp__buttons d-flex">
-                                                    <button class="btn btn-primary greenLight">Записаться</button>
-                                                    <button class="btn btn-primary greenLight">Подробнее</button>
-                                            </div>            
-                                        </div>
-                                        <img class="checkUp__image" src="../img/doctor-working-table 1.png">
-                                    </div>
-
-                                    <div class="carousel-item">
-                                            <div class="checkUp__container">
-                                                <div class="checkUp__text">
-                                                        <p>CHECK-UP</p>
-                                                        <p class="checkUp__gender">для</p>
-                                                        <ul>
-                                                            <li>СИСИС</li>
-                                                            <li>СЩСЩС</li>
-                                                            <li>ЫВЫВАщ</li>
-                                                            <li>ваыа</li>
-                                                        </ul>
-                                                        <div class="checkUp_price d-flex">
-                                                            <p class="checkUp__discPrice">Всего 2800₽</p>
-                                                            <p class="checkUp__startPrice">3500₽</p>
-                                                        </div>                
-                                                </div>   
-                                                <div class="checkUp__buttons d-flex">
-                                                        <button class="btn btn-primary greenLight">Записаться</button>
-                                                        <button class="btn btn-primary greenLight">Подробнее</button>
-                                                </div>            
-                                            </div>
-                                            <img class="checkUp__image" src="../img/doctor-working-table 1.png">
-                                        </div>
                         </div>
 
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
